@@ -1,32 +1,43 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html,
+body,
+#app{
+  Width: 100%;
+  Height: 100%;
+  background: #fff;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  /* css3盒子模型 */
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉li 的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+}
+button {
+  /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+  cursor: pointer;
 }
 </style>
